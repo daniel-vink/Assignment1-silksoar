@@ -5,8 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/silksong_background"
     tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/silksong_background"
+    />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -15,32 +22,36 @@
         android:gravity="center"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        >
+    >
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/silksoar_main"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        android:layout_margin="@dimen/default_margin"
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/silksoar_main"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/default_margin"
         />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/main_BTN_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/btn_start"
-        android:layout_margin="@dimen/default_margin" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/btn_start"
+            android:layout_margin="@dimen/default_margin"
+        />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/main_BTN_about"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/btn_about"
-        android:layout_margin="@dimen/default_margin" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/btn_about"
+            android:layout_margin="@dimen/default_margin"
+        />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 </RelativeLayout>
