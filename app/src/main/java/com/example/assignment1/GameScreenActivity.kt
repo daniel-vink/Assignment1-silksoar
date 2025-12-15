@@ -2,6 +2,7 @@ package com.example.assignment1
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.view.WindowMetrics
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,12 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 private lateinit var game_IMG_hornet: AppCompatImageView
+
+private lateinit var game_IMG_enemyLeft: AppCompatImageView
+
+private lateinit var game_IMG_enemyMiddle: AppCompatImageView
+
+private lateinit var game_IMG_enemyRight: AppCompatImageView
 
 private lateinit var game_FAB_right: ExtendedFloatingActionButton
 
@@ -40,8 +47,14 @@ class GameScreenActivity : AppCompatActivity() {
         game_FAB_right.setOnClickListener { View -> moveImage() }
     }
     private fun moveImage() {
+        val windowMetrics: WindowMetrics = windowManager.currentWindowMetrics
+        val bounds = windowMetrics.bounds
+        val width = bounds.width()
+        val height = bounds.height()
+
+        val moveHeight = (height/10).toFloat()
         game_IMG_hornet.animate()
-            .translationY(1000f)
+            .translationYBy(moveHeight)
             .start()
     }
 }

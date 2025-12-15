@@ -6,27 +6,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameScreenActivity"
-    android:keepScreenOn="true"
-    >
-
+    android:keepScreenOn="true">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/game_IMG_hornet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/hornet_float" />
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/floating_hornet"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/game_IMG_obstacle"
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/game_FAB_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/default_margin"
+        android:clickable="true"
+        app:icon="@android:drawable/arrow_down_float"
+        android:rotation="90"
+        />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/game_FAB_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_margin="@dimen/default_margin"
         android:clickable="true"
-        app:icon="@android:drawable/ic_media_play"
-        />
+        app:icon="@android:drawable/arrow_down_float"
+        android:rotation="270"
+        tools:ignore="RelativeOverlap" />
+
 </RelativeLayout>
