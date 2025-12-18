@@ -13,6 +13,7 @@ import com.example.assignment1.logic.GameManager
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import java.util.Timer
 import java.util.TimerTask
+import androidx.core.view.isVisible
 
 private lateinit var game_IMG_enemy: Array<Array<AppCompatImageView>>
 private lateinit var game_IMG_hornet: Array<AppCompatImageView>
@@ -99,7 +100,7 @@ class GameScreenActivity : AppCompatActivity() {
     private fun moveLeft() {
         if(hornetPosition > 0)
         {
-            if(game_IMG_hornet[hornetPosition - 1].visibility == View.VISIBLE)
+            if(game_IMG_hornet[hornetPosition - 1].isVisible)
                 updateMasks()
             else
                 game_IMG_hornet[hornetPosition - 1].visibility = View.VISIBLE
@@ -113,7 +114,7 @@ class GameScreenActivity : AppCompatActivity() {
     private fun moveRight() {
         if(hornetPosition < 2)
         {
-            if(game_IMG_hornet[hornetPosition + 1].visibility == View.VISIBLE)
+            if(game_IMG_hornet[hornetPosition + 1].isVisible)
                 updateMasks()
             else
                 game_IMG_hornet[hornetPosition + 1].visibility = View.VISIBLE
@@ -130,8 +131,8 @@ class GameScreenActivity : AppCompatActivity() {
                 if(i == 5 && hornetPosition != j)
                     game_IMG_enemy[i][j].visibility = View.INVISIBLE
 
-                if(game_IMG_enemy[i][j].visibility == View.VISIBLE && i < 5){
-                    if(game_IMG_enemy[i + 1][j].visibility == View.VISIBLE){
+                if(game_IMG_enemy[i][j].isVisible && i < 5){
+                    if(game_IMG_enemy[i + 1][j].isVisible){
                         updateMasks()
                     }
                     game_IMG_enemy[i][j].visibility = View.INVISIBLE
