@@ -13,9 +13,8 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
         android:layout_marginTop="@dimen/default_margin">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -254,28 +253,31 @@
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/game_FAB_left"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
             android:layout_margin="@dimen/default_margin"
             android:clickable="true"
             android:layout_gravity="center"
             android:layout_alignParentBottom="true"
-            app:icon="@drawable/arrow_left"
+            app:iconTint="@null"
+            app:backgroundTint="@color/grey_600"
+            android:rotation="180"
+            app:icon="@drawable/arrow"
             />
 
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/game_FAB_right"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
             android:layout_margin="@dimen/default_margin"
             android:layout_gravity="center"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:clickable="true"
-            app:icon="@drawable/arrow_right"
-            />
+            app:iconTint="@null"
+            app:backgroundTint="@color/grey_600"
+            app:icon="@drawable/arrow"
+            tools:ignore="RelativeOverlap" />
 
 </RelativeLayout>

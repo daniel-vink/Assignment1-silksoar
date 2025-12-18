@@ -14,6 +14,7 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 import java.util.Timer
 import java.util.TimerTask
 import androidx.core.view.isVisible
+import com.example.assignment1.utilities.SignalManager
 
 private lateinit var game_IMG_enemy: Array<Array<AppCompatImageView>>
 private lateinit var game_IMG_hornet: Array<AppCompatImageView>
@@ -39,6 +40,7 @@ class GameScreenActivity : AppCompatActivity() {
         }
         findViews()
         gameManager = GameManager(game_IMG_masks.size)
+        SignalManager.init(this)
         initViews()
     }
 

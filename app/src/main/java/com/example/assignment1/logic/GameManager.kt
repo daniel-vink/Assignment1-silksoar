@@ -1,7 +1,6 @@
 package com.example.assignment1.logic
 
-import android.widget.ImageView
-import androidx.core.widget.ImageViewCompat
+import com.example.assignment1.utilities.SignalManager
 
 class GameManager (private val lifeCount: Int = 3){
 
@@ -12,6 +11,17 @@ class GameManager (private val lifeCount: Int = 3){
         get() = numOfHits == lifeCount
 
     fun gotHit(){
+        if(numOfHits < 2) {
+            SignalManager.getInstance().toast(
+                "SHAW!", SignalManager.ToastLength.SHORT
+            )
+        }
+        else{
+            SignalManager.getInstance().toast(
+                "You Died!", SignalManager.ToastLength.LONG
+            )
+        }
+        SignalManager.getInstance().vibrate()
         numOfHits++
     }
 }
