@@ -5,40 +5,277 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/moss_grotto"
     tools:context=".GameScreenActivity"
-    android:keepScreenOn="true">
+    android:keepScreenOn="true"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/game_IMG_hornet"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/floating_hornet"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        />
+        android:id="@+id/game_IMG_mask0"
+        android:layout_width="@dimen/mask_size"
+        android:layout_height="@dimen/mask_size"
+        app:srcCompat="@drawable/mask_life" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/game_FAB_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/default_margin"
-        android:clickable="true"
-        app:icon="@android:drawable/arrow_down_float"
-        android:rotation="90"
-        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/game_IMG_mask1"
+        android:layout_width="@dimen/mask_size"
+        android:layout_height="@dimen/mask_size"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        app:srcCompat="@drawable/mask_life" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/game_FAB_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/game_IMG_mask2"
+        android:layout_width="@dimen/mask_size"
+        android:layout_height="@dimen/mask_size"
+        app:srcCompat="@drawable/mask_life" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-        android:layout_margin="@dimen/default_margin"
-        android:clickable="true"
-        app:icon="@android:drawable/arrow_down_float"
-        android:rotation="270"
-        tools:ignore="RelativeOverlap" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/game_FAB_right"
+        android:orientation="horizontal">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="6"
+            android:layout_margin="@dimen/default_margin"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image00"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image10"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image20"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image30"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image40"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image50"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/default_margin"
+            android:weightSum="6">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image01"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image11"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image21"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image31"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image41"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image51"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/floating_hornet"
+                android:layout_margin="@dimen/default_margin"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/default_margin"
+            android:weightSum="6">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image02"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image12"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image22"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image32"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image42"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image52"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/default_margin"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/game_FAB_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_margin="@dimen/default_margin"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            app:icon="@drawable/arrow_left"
+            />
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/game_FAB_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_margin="@dimen/default_margin"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            app:icon="@drawable/arrow_right"
+            />
 
 </RelativeLayout>

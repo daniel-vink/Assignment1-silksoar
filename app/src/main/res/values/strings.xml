@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Assignment1</string>
+    <string name="app_name">SilkSoar</string>
     <string name="silksoar_main">SILKSOAR</string>
     <string name="btn_start">START</string>
     <string name="btn_about">ABOUT</string>

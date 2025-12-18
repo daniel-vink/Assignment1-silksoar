@@ -8,15 +8,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
 
-class MainActivity : AppCompatActivity() {
-
-private lateinit var main_BTN_start: MaterialButton
-
+class GameOverActivity : AppCompatActivity() {
+    private lateinit var gameover_BTN_back: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_game_over)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -25,22 +23,19 @@ private lateinit var main_BTN_start: MaterialButton
 
         findViews()
         initViews()
-
     }
 
     private fun findViews() {
-        main_BTN_start = findViewById(R.id.main_BTN_start)
+        gameover_BTN_back = findViewById(R.id.gameover_BTN_backToMenu)
     }
 
     private fun initViews() {
-        main_BTN_start.setOnClickListener { view -> changeView() }
+        gameover_BTN_back.setOnClickListener { view -> changeView() }
     }
 
     private fun changeView() {
-        val intent = Intent(this, GameScreenActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
     }
 }
-
-

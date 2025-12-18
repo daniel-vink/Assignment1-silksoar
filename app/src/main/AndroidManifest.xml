@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment1">
         <activity
+            android:name=".GameOverActivity"
+            android:exported="false" />
+        <activity
             android:name=".GameScreenActivity"
             android:exported="false" />
         <activity

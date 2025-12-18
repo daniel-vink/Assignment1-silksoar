@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageView"
+        android:id="@+id/main_IMG_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -41,15 +41,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/btn_start"
-            android:layout_margin="@dimen/default_margin"
-        />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/main_BTN_about"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/btn_about"
             android:layout_margin="@dimen/default_margin"
         />
 
