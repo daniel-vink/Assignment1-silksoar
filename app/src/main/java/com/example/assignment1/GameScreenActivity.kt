@@ -81,6 +81,7 @@ class GameScreenActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        hornetPosition = 1
         game_IMG_hornet[hornetPosition].visibility = View.VISIBLE
         game_FAB_left.setOnClickListener { View -> moveLeft() }
         game_FAB_right.setOnClickListener { View -> moveRight() }
