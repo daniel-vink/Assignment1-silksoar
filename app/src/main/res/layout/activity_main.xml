@@ -42,7 +42,8 @@
             android:layout_gravity="center"
             android:text="@string/buttons_slow"
             android:layout_margin="@dimen/default_margin"
-            android:backgroundTint="@color/grey_600"
+            android:backgroundTint="@color/grey_900"
+            android:textColor="@color/white"
 
             />
 
@@ -53,8 +54,8 @@
             android:layout_gravity="center"
             android:text="@string/buttons_fast"
             android:layout_margin="@dimen/default_margin"
-            android:backgroundTint="@color/grey_600"
-
+            android:backgroundTint="@color/grey_900"
+            android:textColor="@color/white"
             />
 
         <com.google.android.material.button.MaterialButton
@@ -64,8 +65,8 @@
             android:layout_gravity="center"
             android:text="@string/sensors"
             android:layout_margin="@dimen/default_margin"
-            android:backgroundTint="@color/grey_600"
-
+            android:backgroundTint="@color/grey_900"
+            android:textColor="@color/white"
             />
 
         <com.google.android.material.button.MaterialButton
@@ -75,8 +76,8 @@
             android:layout_gravity="center"
             android:text="@string/leaderboard"
             android:layout_margin="@dimen/default_margin"
-            android:backgroundTint="@color/grey_600"
-            />
+            android:backgroundTint="@color/grey_900"
+            android:textColor="@color/white"            />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </RelativeLayout>
