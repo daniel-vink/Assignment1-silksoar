@@ -24,4 +24,24 @@ class GameManager (private val lifeCount: Int = 3){
         SignalManager.getInstance().vibrate()
         numOfHits++
     }
+
+    fun gotHealth(){
+        if(numOfHits > 0) {
+            SignalManager.getInstance().toast(
+                "Got Health!", SignalManager.ToastLength.SHORT
+            )
+            numOfHits--
+        }
+        else{
+            SignalManager.getInstance().toast(
+                "Masks full!", SignalManager.ToastLength.SHORT
+            )
+        }
+    }
+
+    fun getSpeed(key: Int): Long {
+        if(key == 1)
+            return 500L
+        return 1000L
+    }
 }

@@ -14,8 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="@dimen/default_margin"
-        android:layout_marginTop="@dimen/default_margin">
+        android:layout_marginStart="@dimen/default_heart_margin"
+        android:layout_marginTop="@dimen/default_heart_margin">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/game_IMG_mask0"
@@ -37,19 +37,28 @@
         app:srcCompat="@drawable/mask_life" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/game_LBL_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score_0"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/scoreTextSize"
+        android:layout_margin="@dimen/default_margin"
+        tools:ignore="RelativeOverlap" />
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/game_FAB_right"
         android:orientation="horizontal">
 
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:weightSum="6"
+            android:weightSum="7"
             android:layout_margin="@dimen/default_margin"
             >
 
@@ -60,7 +69,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -70,8 +78,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -81,7 +87,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -91,7 +96,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -101,7 +105,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -111,7 +114,15 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image60"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
                 />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -121,7 +132,8 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_margin="@dimen/default_margin"
-            android:weightSum="6">
+            android:weightSum="7"
+            >
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/game_IMG_image01"
@@ -130,7 +142,7 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
+
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -140,7 +152,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -150,8 +161,8 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/game_IMG_image31"
                 android:layout_width="match_parent"
@@ -159,7 +170,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -169,7 +179,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -177,8 +186,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/floating_hornet"
-                android:layout_margin="@dimen/default_margin"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image61"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
                 />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -188,7 +206,7 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_margin="@dimen/default_margin"
-            android:weightSum="6">
+            android:weightSum="7">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/game_IMG_image02"
@@ -197,7 +215,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -207,7 +224,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -217,8 +233,8 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/game_IMG_image32"
                 android:layout_width="match_parent"
@@ -226,7 +242,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -236,7 +251,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
                 />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -246,9 +260,163 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/enemy"
                 android:visibility="invisible"
-                android:layout_margin="@dimen/default_margin"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image62"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/floating_hornet"
+                android:visibility="visible"
                 />
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/default_margin"
+            android:weightSum="7">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image03"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image13"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image23"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image33"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image43"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image53"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image63"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="7"
+            android:layout_margin="@dimen/default_margin"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image04"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image14"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image24"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image34"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image44"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image54"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/game_IMG_image64"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/enemy"
+                android:visibility="invisible"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton

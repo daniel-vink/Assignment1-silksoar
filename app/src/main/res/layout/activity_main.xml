@@ -36,13 +36,47 @@
         />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/main_BTN_start"
+            android:id="@+id/main_BTN_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/btn_start"
+            android:text="@string/buttons_slow"
             android:layout_margin="@dimen/default_margin"
-        />
+            android:backgroundTint="@color/grey_600"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_fast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/buttons_fast"
+            android:layout_margin="@dimen/default_margin"
+            android:backgroundTint="@color/grey_600"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_sensors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/sensors"
+            android:layout_margin="@dimen/default_margin"
+            android:backgroundTint="@color/grey_600"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_leaderboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/leaderboard"
+            android:layout_margin="@dimen/default_margin"
+            android:backgroundTint="@color/grey_600"
+            />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </RelativeLayout>
