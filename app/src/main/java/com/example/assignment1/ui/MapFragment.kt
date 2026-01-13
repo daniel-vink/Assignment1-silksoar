@@ -33,14 +33,14 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     override fun onMapReady(map: GoogleMap) {
         this.googleMap = map
         val sydney = LatLng(-34.0, 151.0)
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
+        //googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 15f))
     }
 
     fun zoomToLocation(lat: Double, lon: Double) {
         val location = LatLng(lat, lon)
         if (::googleMap.isInitialized) {
-            googleMap.clear() // Optional: clear old markers
+            googleMap.clear()
             googleMap.addMarker(MarkerOptions().position(location))
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 15f))
         }

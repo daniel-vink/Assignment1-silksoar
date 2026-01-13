@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatEditText
@@ -85,13 +86,12 @@ class GameOverActivity : AppCompatActivity() {
                 val newScoreEntry = ScoreItem.Builder()
                     .name(playerName)
                     .score(finalScore)
-                    .lat(lat)
-                    .lon(lon)
+                    .lat(lat+5)
+                    .lon(lon+5)
                     .build()
 
                 ScoreManager(this).addScore(newScoreEntry)
 
-                // MOVE NAVIGATION HERE:
                 navigateToLeaderboard()
             }
         } else {

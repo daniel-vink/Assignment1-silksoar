@@ -7,12 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.assignment1.GameScreenActivity
-import com.example.assignment1.LeaderboardActivity
 import com.example.assignment1.MainActivity
 import com.example.assignment1.R
 import com.example.assignment1.adapters.ScoreAdapter
-import com.example.assignment1.databinding.FragmentScoreboardBinding
 import com.example.assignment1.interfaces.ScoreClickedCallback
 import com.example.assignment1.utilities.ScoreManager
 import com.google.android.material.button.MaterialButton
@@ -21,13 +18,13 @@ import com.google.android.material.button.MaterialButton
 class ScoreboardFragment : Fragment() {
 
     private lateinit var scoreboard_LST_scores: RecyclerView
+    private lateinit var scoreboard_BTN_backToMenu: MaterialButton
+
     private lateinit var scoreManager: ScoreManager
 
+    //var scoreClickedCallback: ScoreClickedCallback? = null
+    var scoreItemClicked: ScoreClickedCallback? = null
 
-    companion object {
-        private lateinit var scoreboard_BTN_backToMenu: MaterialButton
-        var scoreItemClicked: ScoreClickedCallback? = null
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,6 +48,7 @@ class ScoreboardFragment : Fragment() {
         scoreboard_BTN_backToMenu.setOnClickListener { view -> changeView() }
         val topScores = scoreManager.getScores()
         val adapter = ScoreAdapter(topScores)
+        adapter.scoreClickedCallback = this.scoreItemClicked
 
         scoreboard_LST_scores.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
         scoreboard_LST_scores.adapter = adapter

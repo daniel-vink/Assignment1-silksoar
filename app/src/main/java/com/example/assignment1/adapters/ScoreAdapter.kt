@@ -40,9 +40,10 @@ class ScoreAdapter(private val scores: List<ScoreItem>) :
             RecyclerView.ViewHolder(binding.root) {
                 init {
                     binding.scoreCVEntry.setOnClickListener {
-                        scoreClickedCallback?.onScoreClicked(
-                            getItem(absoluteAdapterPosition)
-                        )
+                        val position = bindingAdapterPosition // Use this instead
+                        if (position != RecyclerView.NO_POSITION) {
+                            scoreClickedCallback?.onScoreClicked(getItem(position))
+                        }
                     }
                 }
             }

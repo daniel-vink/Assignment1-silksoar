@@ -1,6 +1,7 @@
 package com.example.assignment1
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.FrameLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -55,14 +56,16 @@ class LeaderboardActivity : AppCompatActivity() {
             .commit()
 
         scoreboardFragment = ScoreboardFragment()
-        ScoreboardFragment.scoreItemClicked =
+        scoreboardFragment.scoreItemClicked =
             object : ScoreClickedCallback {
                 override fun onScoreClicked(score: ScoreItem) {
+                    Log.d("ScoreboardFragment", "Score clicked: $score")
+                    //val mapFragment = supportFragmentManager.findFragmentById(R.id.mapFragment_FCV_map) as? MapFragment
                     mapFragment.zoomToLocation(score.lat, score.lon)
                 }
             }
 
-        scoreboardFragment = ScoreboardFragment()
+        //scoreboardFragment = ScoreboardFragment()
         supportFragmentManager
             .beginTransaction()
             .add(R.id.main_FRAME_list, scoreboardFragment)
