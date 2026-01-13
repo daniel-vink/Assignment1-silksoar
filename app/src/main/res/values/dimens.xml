@@ -6,4 +6,5 @@
     <dimen name="scoreTextSize">24sp</dimen>
     <dimen name="scoreEntrySize">16sp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="card_corners">20dp</dimen>
 </resources>

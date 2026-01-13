@@ -86,8 +86,8 @@ class GameOverActivity : AppCompatActivity() {
                 val newScoreEntry = ScoreItem.Builder()
                     .name(playerName)
                     .score(finalScore)
-                    .lat(lat+5)
-                    .lon(lon+5)
+                    .lat(lat)
+                    .lon(lon)
                     .build()
 
                 ScoreManager(this).addScore(newScoreEntry)
@@ -110,34 +110,4 @@ class GameOverActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-
-//    private fun saveFinalScore() {
-//        val playerName = gameOver_ET_name.text.toString().ifEmpty { "Anonymous" }
-//
-//        val finalScore = intent.getIntExtra(Constants.BundleKeys.SCORE_KEY, 0)
-//        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-//            fusedLocationClient.lastLocation.addOnSuccessListener { location ->
-//                val lat = location?.latitude ?: 0.0
-//                val lon = location?.longitude ?: 0.0
-//
-//                val newScoreEntry = ScoreItem.Builder()
-//                    .name(playerName)
-//                    .score(finalScore)
-//                    .lat(lat)
-//                    .lon(lon)
-//                    .build()
-//
-//                ScoreManager(this).addScore(newScoreEntry)
-//            }
-//        } else {
-//            val newScoreEntry = ScoreItem.Builder()
-//                .name(playerName)
-//                .score(finalScore)
-//                .lat(0.0)
-//                .lon(0.0)
-//                .build()
-//            val scoreManager = ScoreManager(this)
-//            scoreManager.addScore(newScoreEntry)
-//        }
-//    }
 }
