@@ -20,7 +20,7 @@ class ScoreManager(context: Context) {
 
         // 2. Save back to SharedPreferences
         val json = gson.toJson(topTen)
-        sharedPreferences.edit().putString("score_list", json).apply()
+        sharedPreferences.edit { putString("score_list", json) }
     }
 
     fun getScores(): List<ScoreItem> {
